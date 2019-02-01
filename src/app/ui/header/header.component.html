@@ -1,0 +1,32 @@
+<nav class="navbar mb-1">
+    <div class="ui top attached tabular menu">
+
+  <a class="item">
+      <img routerLink="/" alt="Uni-Hildesheim Logo" src="assets\pics\2019.01.16_Logo-Uni-Hildesheim.png">
+  </a>
+  <div class="navbar-expand mr-auto">
+    <div class="navbar-nav">
+      <a class="item nav-link active" href="#">Katastrophenmanagement</a>
+
+      <a class="ui item" *ngIf="!loggedUser">
+      <a class="nav-item nav-link" routerLink="/profil">Profil</a>
+      <a class="nav-item nav-link" routerLink="/scheduling">Planung</a>
+      <a class="nav-item nav-link" routerLink="/communication">Kommunikation</a>
+      <a class="nav-item nav-link" routerLink="/information">Information</a>
+    </a>
+    </div>
+  </div>
+
+  <div class="navbar-expand ml-auto navbar-nav">
+    <div class="navbar-nav">
+        <a class="item" *ngIf="loggedUser">
+          <a class="nav-item nav-link" routerLink="/logout">Log-Out</a>
+        </a>
+
+        <a class="item" *ngIf="!loggedUser">
+          <a class="nav-item nav-link" routerLink="/login">Log-In</a>
+        </a>
+    </div>
+  </div>
+  </div>
+</nav>
